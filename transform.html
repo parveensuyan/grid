@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition and Transform Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: steelblue;
+            margin: 20px auto;
+            transition: all 0.5s ease-in-out; /* Transition effect for all properties */
+            transform: rotate(0deg); /* Initial transform state */
+        }
+
+        /* Apply transform and transition on hover */
+        .box:hover {
+            background-color: coral; /* Change color */
+            transform: rotate(45deg) scale(1.2); /* Rotate and scale */
+        }
+
+        /* Another example with transition and transform */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: teal;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Transform transition */
+        }
+
+        .button:hover {
+            transform: translateY(-10px); /* Move up on hover */
+            background-color: darkcyan; /* Change color */
+        }
+    </style>
+</head>
+<body>
+    <h1>Transition and Transform Example</h1>
+    
+    <div class="box"></div> <!-- Box with transform and transition -->
+
+    <button class="button">Hover Me</button> <!-- Button with transform -->
+</body>
+</html>

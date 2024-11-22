@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Running Dog Animation</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #fdfbfc; /* Sky blue background */
+        overflow: hidden;
+      }
+
+      .ground {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background-color: #8b4513; /* Brown ground */
+        border-top: 5px solid #5d341a;
+      }
+
+      .dog {
+        position: absolute;
+        bottom: 100px;
+        left: -200px; /* Start outside the screen */
+        width: 150px;
+        height: auto;
+        animation: run 5s linear infinite, move 10s linear infinite;
+      }
+
+      @keyframes run {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        } /* Up */
+        100% {
+          transform: translateY(0);
+        } /* Down */
+      }
+
+      @keyframes move {
+        0% {
+          left: -200px;
+        }
+        100% {
+          left: 100%;
+        } /* Move across the screen */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ground"></div>
+    <img class="dog" src="https://cdn.pixabay.com/animation/2023/07/07/13/34/13-34-17-270_512.gif" alt="Running Dog" />
+  </body>
+</html>

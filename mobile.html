@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design</title>
+    <style>
+        ul{
+            list-style: none;
+            display: flex;
+            gap  :10px;
+            justify-content: center;
+        }
+        .container {
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 1px;
+
+    }
+    .img-div{
+    display: flex;
+    gap : 10px;
+    padding-top : 10px;
+    background-color: none;
+    background: white;
+    }
+    .container-linear{
+        height: 800px;
+        /* give the direction,right,left and so on */
+          /* background-image: linear-gradient(to top, purple , white); */
+
+        /* angle for the direction */
+        /* background : linear-gradient(178deg, #670f67, #8b7878,white);  */
+
+        /* Radical Gradient */
+          background-image: radial-gradient(white, purple);
+
+    }
+    .box-shadow-container{
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        background: antiquewhite;
+        margin-top: 10px !important;
+        display: table;
+        margin: 0 auto;
+        box-shadow: 10px 10px 10px black, -7px -11px 10px black;
+    }
+.box-shadow-container-inset {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: antiquewhite;
+    margin-top: 10px !important;
+    margin: 0 auto;
+    color: #b02929;
+    font-size: 3rem;
+    box-shadow: 10px 10px 10px black inset, -7px -11px 10px black inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hello-world:hover{
+    /* transform: scaleY(0.5); */
+}
+.hello-world{
+    transform: rotate(357deg);
+    color : blue;
+}
+.hello-world-div{
+    border : 1px solid black;
+    padding : 10px;
+}
+.hello-world-div:hover {
+    transform: scale(0.2);
+}
+
+    /* media queries */
+    @media only screen and (max-width: 400px) {
+        ul{
+           flex-direction: column;
+           text-align: center;
+        }
+        li{
+            color : blue;
+        }
+        .img-div{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="container-linear">
+        <h1>
+            Test class 301
+        </h1>
+    </div>
+    <div class="box-shadow-container">
+
+    </div>
+  <div class="box-shadow-container-inset">
+CLICK
+    </div>
+    <div class="hello-world-div">
+        <h1 class="hello-world">HELLO WORLD!</h1>
+    </div>
+
+      <!-- <div class="container">
+        <ul>
+          <li>Home</li>
+          <li>About us</li>
+          <li>Shop</li>
+      </ul>
+      <div class="img-div">
+          <img src="../Week 2/images/dummy.png" alt="">
+          <img src="../Week 2/images/dummy.png" alt="">
+      </div>
+    </div> -->
+
+  </body>
+</html>

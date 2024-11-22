@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition and Transform Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: steelblue;
+        margin: 20px auto;
+        transform: rotate(0deg);
+        transition: all 0.5s ease-in-out;
+      }
+
+      /* Apply transform and transition on hover */
+      .box:hover {
+        background-color: orange;
+       transform : rotate(45deg) scale(0.5)
+      }
+
+      /* Another example with transition and transform */
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: teal;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .button:hover {
+          background-color: darkcyan;
+          transform : translateY(-10px)
+      }
+      .box-increase-width{
+        font-size: 16px;
+        width: 100px;
+        height: 100px;
+        color: white;
+        background-color: teal;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: width 0.5s ease;
+      }
+      .box-increase-width:hover{
+          width : 500px;
+      }
+      .animation-box{
+          background-color: teal;
+          width: 100px;
+          height: 100px;
+          margin-top: 10px;
+          position: relative;
+          animation: bgchange 3s infinite  ease-in-out;
+      }
+      @keyframes bgchange {
+          0%{
+            background-color: beige;
+            left:100px;
+          }
+          50%{
+           background-color: blue;
+           left:200px;
+          }
+          90%{
+           background-color: purple;
+           left:-400px;
+          }
+          100%{
+            background-color: black;
+             left:-600px;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Transition and Transform Example</h1>
+
+    <div class="box"></div>
+    <!-- Box with transform and transition -->
+    <button class="button">Hover Me</button>
+    <div class="box-increase-width"></div>
+    <div class="animation-box"></div>
+  </body>
+</html>
